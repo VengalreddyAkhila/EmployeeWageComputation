@@ -15,17 +15,17 @@ namespace EmpWageCompution
         {
             Random random = new Random();
             int empCheck = random.Next(0, 3);
-            if (empCheck == IS_FULL_TIME)
+            switch (empCheck)
             {
-                EmpHrs = 8;
-            }
-            else if (empCheck == IS_PART_TIME)
-            {
-                EmpHrs = 4;
-            }
-            else
-            {
-                EmpHrs = 0;
+                case IS_FULL_TIME:
+                    EmpHrs = 8;
+                    break;
+                case IS_PART_TIME:
+                    EmpHrs = 4;
+                    break;
+                default:
+                    EmpHrs = 0;
+                    break;
             }
             Wage = EmpHrs * EMP_RATE_PER_HOUR;
             Console.WriteLine("wage:" + Wage);
