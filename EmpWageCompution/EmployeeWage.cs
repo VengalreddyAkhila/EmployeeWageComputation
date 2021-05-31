@@ -6,22 +6,29 @@ namespace EmpWageCompution
 {
     public class EmployeeWage
     {
-        const int IS_PRESENT = 1;
-        int EMPHRS = 8;
-        int EMP_RATE_PER_HRS = 20;
-        public void Attendance()
+        const int IS_FULL_TIME = 1;
+        const int IS_PART_TIME = 2;
+        const int EMP_RATE_PER_HOUR = 20;
+        int EmpHrs = 0;
+        int Wage = 0;
+        public void Employee()
         {
-            //Employee attendance
             Random random = new Random();
-            int empCheck = random.Next(0, 2);
-            if (empCheck == IS_PRESENT)
+            int empCheck = random.Next(0, 3);
+            if (empCheck == IS_FULL_TIME)
             {
-                //calculate wage
-                int Wage = EMPHRS * EMP_RATE_PER_HRS;
-                Console.WriteLine("Employee is present wage :  " + Wage);
+                EmpHrs = 8;
+            }
+            else if (empCheck == IS_PART_TIME)
+            {
+                EmpHrs = 4;
             }
             else
-                Console.WriteLine("Employee is absent wage :" + 0);
+            {
+                EmpHrs = 0;
+            }
+            Wage = EmpHrs * EMP_RATE_PER_HOUR;
+            Console.WriteLine("wage:" + Wage);
         }
     }
 }
