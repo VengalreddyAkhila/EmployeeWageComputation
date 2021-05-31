@@ -11,6 +11,7 @@ namespace EmpWageCompution
         const int EMP_RATE_PER_HOUR = 20;
         int EmpHrs = 0;
         int Wage = 0;
+        //Employee wage using switch case
         public void Employee()
         {
             Random random = new Random();
