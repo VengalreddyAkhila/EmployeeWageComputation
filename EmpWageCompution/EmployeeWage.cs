@@ -6,14 +6,11 @@ namespace EmpWageCompution
 {
     public class EmployeeWage
     {
-        public void ComputeEmployeeWage()
+        public void ComputeEmployeeWage(int EMP_RATE_PER_HOUR,int NUMBER_OF_WORKING_DAYS, int MAX_HRS_IN_MONTH)
         {
             //constants
             const int IS_FULL_TIME = 1;
             const int IS_PART_TIME = 2;
-            const int EMP_RATE_PER_HOUR = 20;
-            const int NUMBER_OF_WORKING_DAYS = 20;
-            const int MAX_HRS_IN_MONTH = 100;
             //variables
             int EmpHrs = 0;
             int TotalWorkingDays = 0;

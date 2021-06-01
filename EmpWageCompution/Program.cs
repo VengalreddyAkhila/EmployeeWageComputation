@@ -8,7 +8,7 @@ namespace EmpWageCompution
         {
             Console.WriteLine("Welcome to Employee Wage Computation");
             EmployeeWage employeewage = new EmployeeWage();
-            employeewage.ComputeEmployeeWage();
+            employeewage.ComputeEmployeeWage(20, 20, 100);
         }
     }
 }
