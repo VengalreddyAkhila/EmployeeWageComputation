@@ -7,8 +7,12 @@ namespace EmpWageCompution
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome to Employee Wage Computation");
-            EmployeeWage employeewage = new EmployeeWage();
-            employeewage.ComputeEmployeeWage(20, 20, 100);
+            EmployeeWage Max= new EmployeeWage("max", 20 ,3,10);
+            Max.ComputeEmpWage();
+            Console.WriteLine(Max.Value());
+            EmployeeWage Reliance = new EmployeeWage("Reliance", 10, 2, 10);
+            Reliance.ComputeEmpWage();
+            Console.WriteLine(Reliance.Value());
         }
     }
 }
