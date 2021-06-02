@@ -5,6 +5,7 @@ using System.Text;
 namespace EmpWageCompution
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
      class EmployeeWage
     { 
          //constants
@@ -22,6 +23,8 @@ namespace EmpWageCompution
             this.NUMBER_OF_WORKING_DAYS = NUMBER_OF_WORKING_DAYS;
             this.MAX_HRS_IN_MONTH = MAX_HRS_IN_MONTH;
 =======
+=======
+>>>>>>> UC2-CalculateWage
     //using oops concept  Interface
     interface  IAttendanceCalculation
     {
@@ -29,9 +32,24 @@ namespace EmpWageCompution
     }
     class Employee : IAttendanceCalculation
     {
+<<<<<<< HEAD
         public  void Attendance()
         {
             int IS_PRESENT = 1;
+=======
+        public void Attendance()
+        {
+           Console.WriteLine("Employee Attendance");
+        }
+    }
+    class EmployeeWage :Employee , IAttendanceCalculation 
+    { 
+        public void Calculate()
+        {
+            const int IS_PRESENT = 1;
+            int EMPHRS = 8;
+            int EMP_RATE_PER_HRS = 20;
+>>>>>>> UC2-CalculateWage
             Random random = new Random();
             int empCheck = random.Next(0, 2);
             if (empCheck == IS_PRESENT)
@@ -43,6 +61,7 @@ namespace EmpWageCompution
 
             public void ComputeEmpWage()
             {
+<<<<<<< HEAD
                 //variables
                 int EmpHrs = 0;
                 int TotalWorkingDays = 0;
@@ -77,6 +96,16 @@ namespace EmpWageCompution
         public string Value()
         {
             return "total employee wage for company" + this.Company + " is" + this.Wage;
+=======
+                int Wage = EMPHRS * EMP_RATE_PER_HRS;
+                Console.WriteLine("Employee is present wage :  " + Wage);
+            }
+
+            else
+            {
+                Console.WriteLine("Employee is absent wage :" + 0);
+            }
+>>>>>>> UC2-CalculateWage
         }
                    
      }
