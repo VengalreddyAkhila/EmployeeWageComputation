@@ -7,8 +7,10 @@ namespace EmpWageCompution
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome to Employee Wage Computation");
-            EmployeeWage employeewage = new EmployeeWage();
-            employeewage.Attendance();
+            // Employee employee = new Employee();
+            // employee.Attendance();
+            EmployeeWage empwage = new EmployeeWage();
+            empwage.Calculate();
         }
     }
 }
