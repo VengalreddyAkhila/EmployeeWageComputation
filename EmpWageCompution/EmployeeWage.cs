@@ -4,15 +4,26 @@ using System.Text;
 
 namespace EmpWageCompution
 {
-    public class EmployeeWage
+    //using oops concept  Interface
+    interface  IAttendanceCalculation
     {
-        const int IS_FULL_TIME = 1;
-        const int IS_PART_TIME = 2;
-        const int EMP_RATE_PER_HOUR = 20;
-        int EmpHrs = 0;
-        int Wage = 0;
-        public void Employee()
+        public void Attendance();
+    }
+    class Employee : IAttendanceCalculation
+    {
+        public void Attendance()
         {
+           Console.WriteLine("Employee Attendance");
+        }
+    }
+    class EmployeeWage :Employee , IAttendanceCalculation 
+    { 
+        public void Calculate()
+        {
+            const int IS_FULL_TIME = 1;
+            const int IS_PART_TIME = 2;
+            int EmpHrs = 8;
+            int EMP_RATE_PER_HRS = 20;
             Random random = new Random();
             int empCheck = random.Next(0, 3);
             if (empCheck == IS_FULL_TIME)
@@ -27,8 +38,14 @@ namespace EmpWageCompution
             {
                 EmpHrs = 0;
             }
-            Wage = EmpHrs * EMP_RATE_PER_HOUR;
+            int Wage = EmpHrs * EMP_RATE_PER_HRS;
             Console.WriteLine("wage:" + Wage);
         }
     }
+    
 }
+  
+
+        
+    
+
