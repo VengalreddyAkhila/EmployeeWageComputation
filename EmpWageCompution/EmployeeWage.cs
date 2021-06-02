@@ -4,6 +4,7 @@ using System.Text;
 
 namespace EmpWageCompution
 {
+<<<<<<< HEAD
      class EmployeeWage
     { 
          //constants
@@ -20,6 +21,24 @@ namespace EmpWageCompution
             this.EMP_RATE_PER_HOUR = EMP_RATE_PER_HOUR;
             this.NUMBER_OF_WORKING_DAYS = NUMBER_OF_WORKING_DAYS;
             this.MAX_HRS_IN_MONTH = MAX_HRS_IN_MONTH;
+=======
+    //using oops concept  Interface
+    interface  IAttendanceCalculation
+    {
+        public void Attendance();
+    }
+    class Employee : IAttendanceCalculation
+    {
+        public  void Attendance()
+        {
+            int IS_PRESENT = 1;
+            Random random = new Random();
+            int empCheck = random.Next(0, 2);
+            if (empCheck == IS_PRESENT)
+                Console.WriteLine("Employee is Present");
+            else
+                Console.WriteLine("Employee is Absent");
+>>>>>>> UC1-Attendance
         }
 
             public void ComputeEmpWage()
@@ -63,3 +82,8 @@ namespace EmpWageCompution
      }
     
 }
+  
+
+        
+    
+
