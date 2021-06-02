@@ -6,6 +6,7 @@ namespace EmpWageCompution
 {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
      class EmployeeWage
     { 
          //constants
@@ -37,6 +38,15 @@ namespace EmpWageCompution
         {
             int IS_PRESENT = 1;
 =======
+=======
+    //using oops concept  Interface
+    interface  IAttendanceCalculation
+    {
+        public void Attendance();
+    }
+    class Employee : IAttendanceCalculation
+    {
+>>>>>>> UC3-PartTime
         public void Attendance()
         {
            Console.WriteLine("Employee Attendance");
@@ -46,10 +56,17 @@ namespace EmpWageCompution
     { 
         public void Calculate()
         {
+<<<<<<< HEAD
             const int IS_PRESENT = 1;
             int EMPHRS = 8;
             int EMP_RATE_PER_HRS = 20;
 >>>>>>> UC2-CalculateWage
+=======
+            const int IS_FULL_TIME = 1;
+            const int IS_PART_TIME = 2;
+            int EmpHrs = 8;
+            int EMP_RATE_PER_HRS = 20;
+>>>>>>> UC3-PartTime
             Random random = new Random();
             int empCheck = random.Next(0, 2);
             if (empCheck == IS_PRESENT)
@@ -105,10 +122,17 @@ namespace EmpWageCompution
             {
                 Console.WriteLine("Employee is absent wage :" + 0);
             }
+<<<<<<< HEAD
 >>>>>>> UC2-CalculateWage
         }
                    
      }
+=======
+            int Wage = EmpHrs * EMP_RATE_PER_HRS;
+            Console.WriteLine("wage:" + Wage);
+        }
+    }
+>>>>>>> UC3-PartTime
     
 }
   
