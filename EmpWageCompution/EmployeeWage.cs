@@ -4,11 +4,16 @@ using System.Text;
 
 namespace EmpWageCompution
 {
-    class EmployeeWage
+    //using oops concept  Interface
+    interface  IAttendanceCalculation
     {
-        int IS_PRESENT = 1;
-        public void Attendence()
+        public void Attendance();
+    }
+    class Employee : IAttendanceCalculation
+    {
+        public  void Attendance()
         {
+            int IS_PRESENT = 1;
             Random random = new Random();
             int empCheck = random.Next(0, 2);
             if (empCheck == IS_PRESENT)
@@ -18,3 +23,8 @@ namespace EmpWageCompution
         }
     }
 }
+  
+
+        
+    
+
